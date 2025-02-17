@@ -9,7 +9,9 @@ const port = process.env.PORT || 4000;
 const userModel = require("./db/mongoose");
 require("dotenv").config();
 
-app.use(cors());
+app.use(cors({
+    origin: "https://papaya-cannoli-31b605.netlify.app"
+}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
